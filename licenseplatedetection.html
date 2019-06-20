@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My projects</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+     /*@media only screen and (min-width: 858px){
+    .img-output{
+      width:1250px;
+      height:500px;
+      display:flex;
+    }
+    }*/
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  footer li{
+    list-style-type: none;
+  }
+    a img{
+      top:-10px;
+  }
+   .img-output{
+      max-width:100%;
+      height:auto;
+    }
+    @media only screen and (max-width: 858px){
+    .crop
+      {
+        max-width:100%;
+        height:auto;
+      }
+    }
+    .output
+    {
+      max-width:100%;
+      height:auto;
+    }
+  /*@media only screen and (max-width: 858px){
+    .img-output{
+      width:800px;
+      height:320px;
+      display:flex;
+      justify:center;
+    }
+    }*/
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="mylogo.png" alt="LOGO" height="40" width="40"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Second Project -->
+<div class="container-fluid bg-2 text-center">
+  <h1>License Plate Detection</h1>
+</div>
+  
+  
+<!-- second Container -->
+<div class="container-fluid bg-3"> 
+  <p>
+    License Plate detection has many practical uses since many process can be automated. This can be used in detecting license plate at toll plazas, automation of detecting license plate of vehicles
+    by traffic police and penality can be imposed on the drivers who violate the traffic rules without human involvement. We have done the basic implementation of it and can be modified as per the 
+    requirement. The code and working of it is shown here.
+    <i><h4><b>The working of the project is demonstrated below<b></h4></i>
+    <ul>
+    <li>The image is taken as input using argparse.</li>
+    <img class="img-output" src="projects/a.jpg">
+    <li>Given image is converted into gray scale image</li>
+    <img class="img-output" src="projects/gray image.png">
+    <li>Black hat is applied on the obtained gray scale image and then it is followed by Threshold bianry inverse</li>
+    <img class="img-output" src="projects/Black hat.png">
+    <img class="img-output" src="projects/Threshold binary inverse.png">
+    <li>Now Contours are drawn on the image in rectangular shape on the image which  subsequently gives the co-ordinates of license plate</li>
+    <li>Crop the license plate with the obtained contours</li>
+    <img class="crop" src="projects/Detected license plate.png">
+    <li>Again apply tophat and binary thresholding on the obtained license plate</li>
+    <img class="crop" src="projects/License plate.png">
+    <li>Now use image_to_string() method from Pytesseract which is used to extract the text from refined image.</li>
+    <li>Print the String and also it can be saved to a text file</li>
+    <img class="output" src="projects/Saved file.png"><br>
+    <img class="output" src="projects/cmd output.png">
+
+</p>
+  </div>
+
+  
+
+
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <h1>Contact me</h1> 
+  <ul>
+    <li><a href="mailto:nandavikas858@gmail.com">Gmail</a></li>
+    <li><a href="https://github.com/nandavikas">Github</a></li>
+    <li><a href="https://www.linkedin.com/in/nandavikas/">LinkedIn</a>
+  </ul>
+</footer>
+
+</body>
+</html>
