@@ -132,22 +132,27 @@
     <i><h4><b>The working of the project is demonstrated below<b></h4></i>
     <ul>
     <li>Stream a live recording from webcam or by using IP camera. We used IP camera instead of webcam for no good reasonl.</li>
-    <img class="img-output" alt="Image" src="">
-    <li>Given image is converted into gray scale image</li>
-    <img class="img-output" alt="Image" src="projects/">
-    <li>Black hat is applied on the obtained gray scale image and then it is followed by Threshold bianry inverse</li>
-    <img class="img-output" alt="Image" src="projects/">
-    <img class="img-output" alt="Image" src="projects/">
-    <li>Now Contours are drawn on the image in rectangular shape on the image which  subsequently gives the co-ordinates of license plate</li>
-    <li>Crop the license plate with the obtained contours</li>
-    <img class="crop" alt="Image" src="projects/">
-    <li>Again apply tophat and binary thresholding on the obtained license plate</li>
-    <img class="crop" alt="Image" src="projects/">
-    <li>Now use image_to_string() method from Pytesseract which is used to extract the text from refined image.</li>
-    <li>Print the String and also it can be saved to a text file</li>
-    <img class="output" alt="Image" src="projects/"><br>
-    <img class="output" alt="Image" src="projects/">
+    <br>
+    <img width ="700" height="400" class="img-output" alt="Image" src="photo1.png">
+    <li>we draw a rectangle boundry so that fingers placed in that region are captured by pressing a key in the keyboard.</li>
+    <br>
+    <img width ="700" height="400" class="img-output" alt="Image" src="photo1.png">
+    <br>
 
+     <li>for captured background image a convex hell is drawn and convexity defects calculation is performed to count the number of fingers detected.</li>
+     <br>
+    <img width ="700" height="400" class="img-output" alt="Image" src="photo3.png">
+    <br>
+    
+ <li>Number of Fingers detected is displayed and based on number of fingers detected we perform different operations on image streaming through IP camera </li>
+ <br>
+ <img width ="700" height="400" class="img-output" alt="Image" src="photo5.png">
+ <br>
+  <li>if number of fingers detected is one streaming video is converted into black and white and no of fingers is four it makes straming image blurred. </li>
+  <br>
+    <img width ="700" height="400"class="img-output" alt="Image" src="photo4.png">
+    
+    
 </p>
   </div>
 
@@ -159,9 +164,9 @@
 <footer class="container-fluid bg-4 text-center">
   <h1>Contact me</h1> 
   <ul>
-    <li><a href="mailto:nandavikas858@gmail.com">Gmail</a></li>
-    <li><a href="https://github.com/nandavikas">Github</a></li>
-    <li><a href="https://www.linkedin.com/in/nandavikas/">LinkedIn</a>
+    <li><a href="mailto:prasannasai9999@gmail.com">Gmail</a></li>
+    <li><a href="https://github.com/saikumarreydy/saikumar.github.io">Github</a></li>
+    <li><a href="https://www.linkedin.com/in/saikumarreddy9999/">LinkedIn</a>
   </ul>
 </footer>
 
